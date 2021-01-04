@@ -11,7 +11,13 @@
       >
         <p>You can find more information here</p>
         <p>👇</p>
-        <a class="btn_info"> Info </a>
+        <a
+          class="btn_info"
+          :href="this.word.wordInformation.additionalInformation.link"
+          target="_blank"
+        >
+          Info
+        </a>
       </div>
       <div
         class="info-container"
@@ -47,7 +53,7 @@ export default {
         .then((res) => (this.word = res.data))
         .catch((err) => console.log(err))
       this.loading = false
-      console.log(this.word.wordInformation)
+      console.log(this.word.wordInformation.additionalInformation.link)
     }
   },
   watch: {

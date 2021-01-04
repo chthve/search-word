@@ -45,7 +45,7 @@ export default {
     },
     onInputChange(e) {
       this.search.word = e.target.value
-      this.getWords(this.search.language, this.search.word)
+      // this.getWords(this.search.language, this.search.word)
     },
     onSubmit(e) {
       e.preventDefault()
@@ -73,6 +73,7 @@ export default {
 }
 .title {
   font-size: 20px;
+  font-weight: 200;
   text-align: center;
   width: 100%;
   margin-bottom: 3rem;
@@ -103,7 +104,7 @@ export default {
 .search_input {
   background: #eeeeee;
   color: #aaaaaa;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 2rem;
   border: none;
   margin-right: 1rem;
 }
@@ -113,7 +114,7 @@ export default {
   background: #f37a72;
   color: #ffffff;
   text-transform: capitalize;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   border: none;
   cursor: pointer;
 }
