@@ -9,7 +9,7 @@ module.exports = {
   },
   rules: {
     'no-unused-vars': 1,
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }

@@ -59,9 +59,8 @@ export default {
           `https://api.gavagai.se/v3/lexicon/${this.$route.params.language}/${this.$route.params.word}?apiKey=${this.apiKey}`
         )
         .then((res) => (this.word = res.data))
-        .catch((err) => console.log(err))
+        .catch((err) => console.error(err)) //no-console
       this.loading = false
-      console.log(this.word.wordInformation.additionalInformation.link)
     }
   },
   watch: {
