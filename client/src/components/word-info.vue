@@ -27,16 +27,24 @@
         <p class="try-again">Try again with another language</p>
       </div>
     </div>
+    <div class="siblings-wrapper" v-if="!loading">
+      <h1 class="assiocated-title">Associated words:</h1>
+      <div class="siblings-container">
+        <Word v-bind:words="this.word.leftSideNeighbours" class="sibling" />
+        <Word v-bind:words="this.word.rightSideNeighbours" class="sibling" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import Spinner from './spinner'
+import Word from './word-display'
 
 export default {
   name: 'Info',
-  components: { Spinner },
+  components: { Spinner, Word },
   data() {
     return {
       apiKey: process.env.VUE_APP_API_KEY,
@@ -71,6 +79,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-image: url('https://images.unsplash.com/photo-1608893801920-7b5d1e6a7855?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80');
 }
 .info-wrapper {
@@ -79,7 +88,7 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 40%;
-  height: 30vh;
+  height: 40%;
   background: rgb(255, 255, 255, 0.1);
 }
 
@@ -87,9 +96,28 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  padding-top: 2rem;
   justify-content: space-around;
   position: relative;
+}
+.siblings-wrapper {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255, 0.1);
+}
+.siblings-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sibling {
+  width: 35%;
 }
 .title {
   text-align: center;
@@ -110,7 +138,14 @@ export default {
 .try-again {
   font-size: 10px;
   font-style: italic;
-  position: absolute;
-  bottom: 0;
+  margin-top: 2rem;
+}
+
+p {
+  text-align: center;
+}
+
+.assiocated-title {
+  font-size: 12px;
 }
 </style>

@@ -2,7 +2,6 @@
   <div>
     <div class="main">
       <Search v-bind:languages="languages" @words="onReceivingWords" />
-      <Words v-bind:words="words" />
     </div>
   </div>
 </template>
@@ -11,7 +10,6 @@
 import axios from 'axios'
 
 import Search from './search-bar'
-import Words from './word-display'
 
 export default {
   name: 'Home',
@@ -23,8 +21,7 @@ export default {
     }
   },
   components: {
-    Search,
-    Words
+    Search
   },
   methods: {
     getLanguages() {
