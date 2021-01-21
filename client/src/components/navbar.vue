@@ -2,8 +2,12 @@
   <div class="navbar">
     <ul class="list-container">
       <img src="../assets/logo.png" />
-      <li><router-link tag="li" to="/">Home</router-link></li>
-      <li><router-link tag="li" to="/about">About</router-link></li>
+      <!-- <div class="navigation"> -->
+      <router-link tag="li" to="/">Home</router-link>
+      <!-- </div> -->
+      <!-- <div class="navigation"> -->
+      <router-link tag="li" to="/about">About</router-link>
+      <!-- </div> -->
     </ul>
   </div>
 </template>
@@ -30,8 +34,9 @@ export default {
 }
 
 li + li {
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
+
 li {
   text-decoration: none;
   cursor: pointer;
@@ -40,7 +45,7 @@ li {
 }
 
 li:hover {
-  border-bottom: 1px solid #f37a72;
+  border-bottom: 2px solid #f37a72;
 }
 
 li:active {

@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .words-container {
-  width: 100%;
+  width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ export default {
 
 .word-container {
   text-align: center;
-  width: 70%;
+  width: 70vw;
   font-size: 12px;
   padding-bottom: 0.2rem;
 }

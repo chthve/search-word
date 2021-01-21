@@ -9,7 +9,11 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Home },
+  {
+    path: '/',
+    component: Home,
+    meta: { title: 'Search' }
+  },
   { path: '/info/:language/:word', component: Info },
   { path: '/about', component: About }
 ]
