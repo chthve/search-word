@@ -22,9 +22,12 @@ VUE_APP_API_KEY=<Your API KEY>
 
 ## Screenshot
 
-
+### Desktop Version
 <div align="center">
-  <img width="800px" src="client/src/assets/screenshot.png"/>
+  <img width="800px" src="client/src/assets/screenshot-1.png"/>
+</div>
+<div align="center">
+  <img width="800px" src="client/src/assets/screenshot-2.png"/>
 </div>
 
 
