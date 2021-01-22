@@ -22,7 +22,6 @@ VUE_APP_API_KEY=<Your API KEY>
 
 ## Screenshot
 
-### Desktop Version
 <div align="center">
   <img width="800px" src="client/src/assets/screenshot-1.png"/>
 </div>
@@ -41,7 +40,7 @@ VUE_APP_API_KEY=<Your API KEY>
 
 ### Author
 
-- Charles-Thibault Verrier - [GitHub](https://github.com/chthve) [Linkedin](https://linkedin.com/in/chthve)
+- Charles-Thibault Verrier - [GitHub](https://github.com/chthve) - [Linkedin](https://linkedin.com/in/chthve)
 
 ## License
 
